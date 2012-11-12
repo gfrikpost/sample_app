@@ -38,6 +38,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 group :development do
   gem 'rspec-rails', '2.6.1'
+  gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
 end
 
 group :test do
