@@ -8,6 +8,7 @@ gem 'rails', '3.2.8'
 gem 'sqlite3'
 
 gem 'gravatar_image_tag', '1.0.0.pre2'
+gem 'will_paginate', '3.0.pre4'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -40,6 +41,7 @@ gem 'jquery-rails'
 group :development do
   gem 'rspec-rails', '2.6.1'
   gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
+  gem 'faker'
 end
 
 group :test do
