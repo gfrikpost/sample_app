@@ -68,4 +68,32 @@ describe "LayoutLinks" do
                                          :content => "Profile")
     end
   end
+  
+  describe "when admin user" do
+    
+    before(:each) do
+      @admin = Factory(:user, :email => "admin@example.com", :admin => true)
+      integration_sign_in(@admin)
+    end
+    
+    it "should have a delete link" do
+      visit users_path
+      response.should have_selector("a", :href => user_path(@admin),
+                                    :title => "Delete #{@admin.name}")
+    end
+  end
+  
+  describe "when a normal user" do
+    
+    before(:each) do
+      @user = Factory(:user)
+      integration_sign_in(@user)
+    end
+    
+    it "should not have a delete link" do
+      response.should_not have_selector("a", :href => user_path(@user),
+                                        :title => "Delete #{@user.name}")
+    end
+  end
+  
 end
