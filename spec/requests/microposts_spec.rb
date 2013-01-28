@@ -38,4 +38,12 @@ describe "Microposts" do
       end
     end
   end
+  
+  describe "should display the number of microposts" do
+    lambda do
+      visit root_path
+      response.should have_selector("span", :class => "microposts",
+              :content => pluralize(current_user.microposts.count, "micropost"))
+    end
+  end
 end
