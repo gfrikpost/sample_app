@@ -11,8 +11,6 @@ class CreateRelationships < ActiveRecord::Migration
     add_index :relationships, [:follower_id, :followed_id], :unique => true
   end
   
-  def self.down
-    drop_table :relationships
-  end
+  
 end
 

@@ -10,7 +10,5 @@ class CreateMicroposts < ActiveRecord::Migration
     add_index :microposts, :created_at
   end
   
-  def self.down
-    drop_table :microposts
-  end
+  
 end

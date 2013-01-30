@@ -1,4 +1,4 @@
-# Используя символ ':user', мы указываем Factory Girl на необходимость симулировать модель User.
+# РСЃРїРѕР»СЊР·СѓСЏ СЃРёРјРІРѕР» ':user', РјС‹ СѓРєР°Р·С‹РІР°РµРј Factory Girl РЅР° РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ СЃРёРјСѓР»РёСЂРѕРІР°С‚СЊ РјРѕРґРµР»СЊ User.
 Factory.define :user do |user|
   user.name                  "Michael Hartl"
   user.email                 "mhartl@example.com"
